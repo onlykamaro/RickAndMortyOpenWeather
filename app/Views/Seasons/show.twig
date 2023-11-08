@@ -1,0 +1,14 @@
+{% include 'Partials/topbar.twig' %}
+{% include 'Partials/head.twig' %}
+{% include 'Partials/navbar.twig' %}
+{% include 'Partials/header.twig' %}
+
+<section>
+    {% for episode in episodes %}
+        <a href="/episode/{{ episode.id }}">
+            <div class="episode-container">{{ episode.name }}</div>
+        </a>
+    {% endfor %}
+</section>
+
+{% include 'Partials/footer.twig' %}

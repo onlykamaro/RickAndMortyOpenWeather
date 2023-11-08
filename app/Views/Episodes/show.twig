@@ -1,0 +1,25 @@
+{% include 'Partials/topbar.twig' %}
+{% include 'Partials/head.twig' %}
+{% include 'Partials/navbar.twig' %}
+{% include 'Partials/header.twig' %}
+
+<section>
+    <p class="episode">{{ episode.episode }} | Air date: {{ episode.airDate.format('Y-m-d') }}</p>
+
+    {% for character in characters %}
+        <div class="character-container">
+            <div class="image">
+                <img src="{{ character.image }}">
+            </div>
+            <div class="description">
+                <h2>{{ character.name }}</h2>
+                <p>Status: {{ character.status }}</p>
+                <p>Species: {{ character.species }}</p>
+                <p>Gender: {{ character.gender }}</p>
+                <p>Location: {{ character.location }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+{% include 'Partials/footer.twig' %}
